@@ -1,0 +1,44 @@
+
+{
+    "language": "English",
+    "title": "Hi I'm Charles",
+    "introduction": "Front-end Developer",
+    "description": "I design and develop experiences that make people's lives simpler through Web and Mobile apps. I work with FIgma, HTML5, CSS3, JavaScript, React, ReactNative and Flutter.",
+    "hireMe": "Hire Me",
+    "seeProjects": "See My Projects",
+    "aboutMe": "About Me",
+    "skills": "Skills",
+    "project": "Project",
+    "contact": "Contact",
+
+  }
+  
+
+  {
+    "language": "Russian",
+    "title": "Привет, я Чарльз",
+    "introduction": "Фронтенд-разработчик",
+    "description": "Я разрабатываю пользовательские интерфейсы, упрощающие жизнь людей с помощью веб-приложений и мобильных приложений. Я работаю с FIgma, HTML5, CSS3, JavaScript, React, ReactNative и Flutter.",
+    "hireMe": "Нанять меня",
+    "seeProjects": "Посмотреть мои проекты",
+    "aboutMe": "О Мне",
+    "skills": "Навыки",
+    "project": "Проект",
+    "contact": "Связаться",
+
+  }
+
+  {
+    "language": "Uzbek",
+    "title": "Salom, men Charlesman",
+    "introduction": "Front-end dasturchisi",
+    "description": "Men odamlarning hayotini veb va mobil iloqalar orqali osonlashtiradigan tajribalarni loyihalashtiraman va ishlab chiqaman. FIgma, HTML5, CSS3, JavaScript, React, ReactNative va Flutter bilan ishlayman.",
+    "hireMe": "Meni yollash",
+    "seeProjects": "Loyihalarimni ko'ring",
+    "aboutMe": "Men haqimda",
+    "skills": "Malakalari",
+    "project": "Loyiha",
+    "contact": "Aloqa",
+
+  }
+  

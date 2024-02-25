@@ -1,0 +1,161 @@
+body{
+    width: 1512px;
+    height: 982px;
+;
+}
+
+Li{
+    list-style-type:none;
+
+}
+Ul{
+    display: flex;
+    text-decoration: none;
+    justify-content: space-around;
+    gap:50px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+NAV{
+    display:flex;
+    justify-content: space-around;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-right: 150px;
+}
+Logo{
+    display:flex;
+    flex-direction:row;
+}
+a{
+    text-decoration: none;
+    border: none;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    font-size: 30px;
+    /* Animatsiyani ulashish */
+    animation: changeColor 5s infinite;
+
+}
+@keyframes changeColor {
+    0% {
+        color: white;
+    }
+    25% {
+        color: black;
+    }
+    50% {
+        color: darkblue;
+    }
+    75% {
+        color: white;
+    }
+    100% {
+        color: black;
+    }
+}
+
+ 
+.dark-mode{
+    background-color: #000000;
+    color: #fff;
+    border-radius: 0;
+    border: none;
+  }
+  
+  .dark{
+    border: none;
+    border-radius: 50%;
+    padding-right: 450px;
+  }
+ .hed{
+    font-size: 70px;
+    Width: 801px;
+    height: 257px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 121px;
+ }
+  p{
+    font-size: 29px;
+    Width: 762px;
+    height: 187px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: #6B6868;
+    opacity: 0.9;
+  }
+  .hire{
+    color: black;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    width: 225px;
+    height: 84px;
+    font-size: 32px;
+    Padding: 30px, 50px, 30px, 50px;
+    Gap: 20px;
+    margin-left: 40px;
+
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  .hire:hover{
+    background-color: black;
+    color: #fff;
+  }
+  .see:hover{
+    background-color: white;
+    color: #000000;
+
+  }
+  .see{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border: 2px solid white;
+    width: 378px;
+    height: 84px;
+    font-size: 32px;
+    Padding: 30px, 50px, 30px, 50px;
+    Gap: 20px;
+    cursor: pointer;
+  }
+  .container{
+
+    width: 762px;
+    height: 500px;
+  }
+  .big-box{ display: flex;}
+  .box{
+    padding-top: 140px;
+    width: 100px;
+    height: 106px;
+  }
+  .negr{
+    width: 500px;
+    height: 700px;
+    padding-left: 80px;
+  }
+  .a{
+    cursor: pointer;
+  }
+  .loader{
+    margin-left: 530px;
+    margin-top: 300px;
+  }
+
+  .transl{
+    width: 80px;
+    height: 50px;
+    font-size: 15px;
+    border: none;
+    border-bottom: 2px solid black;
+    border-right: 1px solid black;
+  }
