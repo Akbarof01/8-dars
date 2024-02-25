@@ -5,8 +5,12 @@
          "Skills": "Skills",
          "Project": "Project",
          "Contact": "Contact",
-         "hi": "Hi ,I’m Charles, Front-end Developer",
-         "pe":"I design and develop experiences that make people’s lives simpler through Web and Mobile apps.I work with FIgma , HTML5, CSS3, JavaScript, React, ReactNative and Flutter."
+         "hi": "Hi",
+         "he":"I’m Charles,",
+         "hu":"Front-end Developer",
+         "pe":"I design and develop experiences that make people’s lives simpler through Web and Mobile apps.I work with FIgma , HTML5, CSS3, JavaScript, React, ReactNative and Flutter.",
+         "Hire":"HIRE ME",
+         "Se":"SEE MY PROJECTS"
        }
      },
      "ru": {
@@ -15,8 +19,12 @@
         "Skills": "Навыки",
         "Project": "Проект",
         "Contact": "Контакт",
-        "hi": "Привет, я Чарльз, фронтенд-разработчик",
-         "pe":"Я проектирую и разрабатываю решения, которые упрощают жизнь людей с помощью веб- и мобильных приложений. Я работаю с FIgma, HTML5, CSS3, JavaScript, React, ReactNative и Flutter."
+        "hi": "Привет",
+        "he":", я Чарльз,",
+        "hu":"Фронтенд-разработчик",
+         "pe":"Я проектирую и разрабатываю решения, которые упрощают жизнь людей с помощью веб- и мобильных приложений. Я работаю с FIgma, HTML5, CSS3, JavaScript, React, ReactNative и Flutter.",
+         "Hire":"НАЙМИ МЕНЯ",
+         "Se":"ПОСМОТРЕТЬ МОИ ПРОЕКТЫ"
       }
      },
      "uz": {
@@ -25,8 +33,13 @@
         "Skills": "Ko'nikmalar",
         "Project": "Loyiha",
         "Contact": "Aloqa",
-        "hi": "Salom,Men Charlzman,Front-end Developer",
-         "pe":"Men veb va mobil ilovalar orqali odamlarning hayotini soddalashtiradigan tajribalarni ishlab chiqaman va ishlab chiqaman. Men FIgma, HTML5, CSS3, JavaScript, React, ReactNative va Flutter bilan ishlayman."
+        "hi": "Salom",
+        "he":"Men Charlzman,",
+        "hu":"Front-end Developer",
+         "pe":"Men veb va mobil ilovalar orqali odamlarning hayotini soddalashtiradigan tajribalarni ishlab chiqaman va ishlab chiqaman. Men FIgma, HTML5, CSS3, JavaScript, React, ReactNative va Flutter bilan ishlayman.",
+         "Hire":"MENI ISHLASH",
+         "Se":"LOYIHALARIMNI KOʻRING"
+
       }
       }
    }
