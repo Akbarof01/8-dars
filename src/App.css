@@ -1,7 +1,21 @@
+*{
+  margin: 0 auto;
+  padding: 0;
+
+}
 body{
-    width: 1512px;
-    height: 982px;
-;
+  background-image: linear-gradient(to right, #1f3040 0%, #1f3040 50%, #ff9442 50%, #ff9442 100%);
+}
+.backgraund{
+  
+  width: 100%;
+  height: 100%;
+}
+.card{
+  height: 760px;
+  width: 1350px;
+  background-color: #fff;
+
 }
 
 Li{
@@ -26,7 +40,8 @@ NAV{
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-right: 150px;
+    padding-right: 24px;
+    padding-left: 50px;
 }
 Logo{
     display:flex;
@@ -134,14 +149,15 @@ a{
   }
   .big-box{ display: flex;}
   .box{
-    padding-top: 140px;
+    padding-top: 110px;
     width: 100px;
     height: 106px;
   }
   .negr{
     width: 500px;
-    height: 700px;
-    padding-left: 80px;
+    height: 600px;
+    padding-right: 10px;
+    padding-top: 100px;
   }
   .a{
     cursor: pointer;

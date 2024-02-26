@@ -1,5 +1,5 @@
 import { Routes, Route, Link } from 'react-router-dom'
-import { useState, useEffect } from 'react';
+import { useState, useEffect,  } from 'react';
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -24,23 +24,27 @@ setLoading(false)
 },1500)
 },[])
 
-  const [isDarkMode, setIsDarkMode] = useState(false);
+const [isDarkMode, setIsDarkMode] = useState(
+  () => localStorage.getItem('isDarkMode') === 'true' || false                                                                  
+);
 
-  // UseEffect to apply the mode when the component mounts
-  useEffect(() => {
-    applyMode();
-  }, [isDarkMode]);
+useEffect(() => {
+  localStorage.setItem('isDarkMode', isDarkMode);                                                                   
+}, [isDarkMode]);
 
-  // Function to apply the mode styles
-  const applyMode = () => {
-    const body = document.body;
-    body.classList.toggle('dark-mode', isDarkMode);
-  };
+const toggleMode = () => {
+  setIsDarkMode((prevMode) => !prevMode);
+};
 
-  // Toggle function to switch between light and dark mode
-  const toggleMode = () => {
-    setIsDarkMode((prevMode) => !prevMode);
-  };
+const applyMode = () => {
+  const body = document.body;
+  body.classList.toggle('dark-mode', isDarkMode);
+};
+
+useEffect(() => {
+  applyMode();                                                                  
+}, [isDarkMode]);                                                                   
+
   const Header = styled.header`
   
   `;
@@ -77,12 +81,14 @@ setLoading(false)
   }
   
   return (
-    <div className='body'>
+    <div className='card'>
+
+<div className={`App ${isDarkMode ? 'dark-mode' : ''}`}>
           {
         loading?
         <BarLoader
         className='loader'
-        color={'#000000'}
+        color={'red'}
         loading={loading}
         height={10}
         width={300}
@@ -98,11 +104,10 @@ setLoading(false)
 
       <NAV>
 
-        <div className={`App ${isDarkMode ? 'dark-mode' : ''}`}>
       {/*<h1>{isDarkMode ? 'Dark Mode' : 'Light Mode'}</h1> className='dark' onClick={toggleMode} */}
-      <svg className='dark' onClick={toggleMode} xmlns="http://www.w3.org/2000/svg" width="4em" height="4em" viewBox="0 0 24 24"><defs><mask id="lineMdLightDarkLoop0"><circle cx="7.5" cy="7.5" r="5.5" fill="#fff"/><circle cx="7.5" cy="7.5" r="5.5"><animate fill="freeze" attributeName="cx" dur="0.4s" values="7.5;11"/><animate fill="freeze" attributeName="r" dur="0.4s" values="5.5;6.5"/></circle></mask><mask id="lineMdLightDarkLoop1"><g fill="#fff"><circle cx="12" cy="9" r="5.5"><animate fill="freeze" attributeName="cy" begin="1s" dur="0.5s" values="9;15"/></circle><g><g fill-opacity="0"><use href="#lineMdLightDarkLoop2" transform="rotate(-125 12 15)"/><use href="#lineMdLightDarkLoop2" transform="rotate(-75 12 15)"/><use href="#lineMdLightDarkLoop2" transform="rotate(-25 12 15)"/><use href="#lineMdLightDarkLoop2" transform="rotate(25 12 15)"/><use href="#lineMdLightDarkLoop2" transform="rotate(75 12 15)"/><set attributeName="fill-opacity" begin="1.5s" to="1"/></g><animateTransform attributeName="transform" dur="5s" repeatCount="indefinite" type="rotate" values="0 12 15;50 12 15"/></g></g><path d="M0 10h26v5h-26z"/><path fill="none" stroke="#fff" stroke-dasharray="26" stroke-dashoffset="26" stroke-linecap="round" stroke-width="2" d="M1 12h22"><animate attributeName="d" dur="6s" repeatCount="indefinite" values="M0 12h22;M2 12h22;M0 12h22"/><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.5s" dur="0.4s" values="26;52"/></path></mask><symbol id="lineMdLightDarkLoop2"><path d="M0 0"><animate fill="freeze" attributeName="d" begin="1.5s" dur="0.4s" values="M11 18h2L12 20z;M10.5 21.5h3L12 24z"/></path></symbol></defs><g fill="currentColor"><rect width="13" height="13" x="1" y="1" mask="url(#lineMdLightDarkLoop0)"/><path d="M-2 11h28v13h-28z" mask="url(#lineMdLightDarkLoop1)" transform="rotate(-45 12 12)"/></g></svg>
+      <svg className='dark'  onClick={toggleMode} xmlns="http://www.w3.org/2000/svg" width="4em" height="4em" viewBox="0 0 24 24"><defs><mask id="lineMdLightDarkLoop0"><circle cx="7.5" cy="7.5" r="5.5" fill="#fff"/><circle cx="7.5" cy="7.5" r="5.5"><animate fill="freeze" attributeName="cx" dur="0.4s" values="7.5;11"/><animate fill="freeze" attributeName="r" dur="0.4s" values="5.5;6.5"/></circle></mask><mask id="lineMdLightDarkLoop1"><g fill="#fff"><circle cx="12" cy="9" r="5.5"><animate fill="freeze" attributeName="cy" begin="1s" dur="0.5s" values="9;15"/></circle><g><g fill-opacity="0"><use href="#lineMdLightDarkLoop2" transform="rotate(-125 12 15)"/><use href="#lineMdLightDarkLoop2" transform="rotate(-75 12 15)"/><use href="#lineMdLightDarkLoop2" transform="rotate(-25 12 15)"/><use href="#lineMdLightDarkLoop2" transform="rotate(25 12 15)"/><use href="#lineMdLightDarkLoop2" transform="rotate(75 12 15)"/><set attributeName="fill-opacity" begin="1.5s" to="1"/></g><animateTransform attributeName="transform" dur="5s" repeatCount="indefinite" type="rotate" values="0 12 15;50 12 15"/></g></g><path d="M0 10h26v5h-26z"/><path fill="none" stroke="#fff" stroke-dasharray="26" stroke-dashoffset="26" stroke-linecap="round" stroke-width="2" d="M1 12h22"><animate attributeName="d" dur="6s" repeatCount="indefinite" values="M0 12h22;M2 12h22;M0 12h22"/><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.5s" dur="0.4s" values="26;52"/></path></mask><symbol id="lineMdLightDarkLoop2"><path d="M0 0"><animate fill="freeze" attributeName="d" begin="1.5s" dur="0.4s" values="M11 18h2L12 20z;M10.5 21.5h3L12 24z"/></path></symbol></defs><g fill="currentColor"><rect width="13" height="13" x="1" y="1" mask="url(#lineMdLightDarkLoop0)"/><path d="M-2 11h28v13h-28z" mask="url(#lineMdLightDarkLoop1)" transform="rotate(-45 12 12)"/></g></svg>
       {/* Rest of your components */}
-    </div>
+
         <Ul >
           <Li><a href='#AboutMe' to ="/" >{t('About')}</a></Li>
           <Li><a href='#Skills' to ="/skills" >{t('Skills')}</a></Li>
@@ -132,9 +137,9 @@ setLoading(false)
    <button className='hire'>{t('Hire')}</button>
    <button className='see'>{t('Se')}</button>
       </div>
-      <div className='box'>
+
         <img className='negr' src="./Group 1 (2).png" alt="" />   
-      </div>
+      
      </div>
      </div>}
 
@@ -144,6 +149,7 @@ setLoading(false)
      <Route path='/contact' element = {<Contact></Contact>}/>
 
      </Routes>
+     </div>
     </div>
   )
 }
